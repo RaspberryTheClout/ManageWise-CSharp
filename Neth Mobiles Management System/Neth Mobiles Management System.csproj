@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D5DBB9E-EBE8-42DF-90C8-4FFFDC31410C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Neth_Mobiles_Management_System</RootNamespace>
+    <AssemblyName>Neth Mobiles Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>blockchain.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.4.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector NET 8.4\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin_db.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admin_db.Designer.cs">
+      <DependentUpon>admin_db.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admin_home.Designer.cs">
+      <DependentUpon>admin_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_inventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admin_inventory.Designer.cs">
+      <DependentUpon>admin_inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="auth_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="auth_update.Designer.cs">
+      <DependentUpon>auth_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="auth_maker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="auth_maker.Designer.cs">
+      <DependentUpon>auth_maker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseClass\DraggableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseClass\PasswordHelper.cs" />
+    <Compile Include="BaseClass\RateLimiter.cs" />
+    <Compile Include="BaseClass\sqlconnection.cs" />
+    <Compile Include="auth_register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="auth_register.Designer.cs">
+      <DependentUpon>auth_register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard_admin.Designer.cs">
+      <DependentUpon>dashboard_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard_main.Designer.cs">
+      <DependentUpon>dashboard_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard_repairs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard_repairs.Designer.cs">
+      <DependentUpon>dashboard_repairs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="main_home.Designer.cs">
+      <DependentUpon>main_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_inventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="main_inventory.Designer.cs">
+      <DependentUpon>main_inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="main_order.Designer.cs">
+      <DependentUpon>main_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_sales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="main_sales.Designer.cs">
+      <DependentUpon>main_sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="new_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_order.Designer.cs">
+      <DependentUpon>new_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="repair_home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="repair_home.Designer.cs">
+      <DependentUpon>repair_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="repair_orders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="repair_orders.Designer.cs">
+      <DependentUpon>repair_orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="new_sale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_sale.Designer.cs">
+      <DependentUpon>new_sale.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="admin_db.resx">
+      <DependentUpon>admin_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_home.resx">
+      <DependentUpon>admin_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_inventory.resx">
+      <DependentUpon>admin_inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="auth_maker.resx">
+      <DependentUpon>auth_maker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="auth_register.resx">
+      <DependentUpon>auth_register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="auth_update.resx">
+      <DependentUpon>auth_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboard_admin.resx">
+      <DependentUpon>dashboard_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboard_main.resx">
+      <DependentUpon>dashboard_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboard_repairs.resx">
+      <DependentUpon>dashboard_repairs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_home.resx">
+      <DependentUpon>main_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_inventory.resx">
+      <DependentUpon>main_inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_order.resx">
+      <DependentUpon>main_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_sales.resx">
+      <DependentUpon>main_sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_order.resx">
+      <DependentUpon>new_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="repair_home.resx">
+      <DependentUpon>repair_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repair_orders.resx">
+      <DependentUpon>repair_orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_sale.resx">
+      <DependentUpon>new_sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\log-out_32.png" />
+    <None Include="Assets\idea_32.png" />
+    <None Include="Assets\crm_160.png" />
+    <None Include="Assets\emerging-industries_32.png" />
+    <None Include="Assets\officer_160.png" />
+    <None Include="Assets\users-alt_60.png" />
+    <None Include="Assets\user_60.png" />
+    <None Include="Assets\marker_60.png" />
+    <None Include="Assets\office.png" />
+    <None Include="Assets\big-data_160.png" />
+    <None Include="Assets\technician.png" />
+    <None Include="Assets\settings_60.png" />
+    <None Include="Assets\edit_60.png" />
+    <None Include="Assets\menu_60.png" />
+    <None Include="Assets\neth.png" />
+    <Content Include="blockchain.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
